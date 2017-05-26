@@ -1,3 +1,4 @@
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
 var assert  = require('assert'),
     iconv   = require(__dirname + '/../');
 
@@ -30,3 +31,5 @@ describe("ShiftJIS tests", function() {
         assert.strictEqual(iconv.encode('①', 'shiftjis').toString('hex'), '8740');
     });
 });
+
+return module.exports;});

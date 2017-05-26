@@ -1,22 +1,25 @@
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
 "use strict";
 
 // Update this array if you add/rename/remove files in this directory.
 // We support Browserify by skipping automatic module discovery and requiring modules directly.
 var modules = [
-    require("./internal"),
-    require("./utf16"),
-    require("./utf7"),
-    require("./sbcs-codec"),
-    require("./sbcs-data"),
-    require("./sbcs-data-generated"),
-    require("./dbcs-codec"),
-    require("./dbcs-data"),
+    require("iconv-lite/encodings/internal"),
+    require("iconv-lite/encodings/utf16"),
+    require("iconv-lite/encodings/utf7"),
+    require("iconv-lite/encodings/sbcs-codec"),
+    require("iconv-lite/encodings/sbcs-data"),
+    require("iconv-lite/encodings/sbcs-data-generated"),
+    require("iconv-lite/encodings/dbcs-codec"),
+    require("iconv-lite/encodings/dbcs-data"),
 ];
 
 // Put all encoding/alias/codec definitions to single object and export it. 
 for (var i = 0; i < modules.length; i++) {
-    var module = modules[i];
-    for (var enc in module)
-        if (Object.prototype.hasOwnProperty.call(module, enc))
-            exports[enc] = module[enc];
+    var mod = modules[i];
+    for (var enc in mod)
+        if (Object.prototype.hasOwnProperty.call(mod, enc))
+            exports[enc] = mod[enc];
 }
+
+return module.exports;});

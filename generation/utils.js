@@ -1,3 +1,4 @@
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
 
 var request = require('request'),
     fs = require('fs'),
@@ -106,6 +107,8 @@ exports.writeTable = function(name, table) {
 }
 
 exports.writeFile = function(name, body) {
-    fs.writeFileSync(path.join(__dirname, "../encodings/tables", name + ".json"), body);
+    fs.writeFileSync(path.join(__dirname, "iconv-lite/encodings/tables", name + ".json"), body);
 }
 
+
+return module.exports;});

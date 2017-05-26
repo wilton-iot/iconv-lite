@@ -1,3 +1,4 @@
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
 var assert = require('assert'),
     semver = require('semver'),
     iconv = require(__dirname+'/../');
@@ -321,3 +322,5 @@ describe("Streaming sugar", function() {
     });
 });
 
+
+return module.exports;});

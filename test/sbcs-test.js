@@ -1,3 +1,4 @@
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
 var assert = require('assert'),
     unorm = require('unorm'),
     iconv = require(__dirname+'/../'),
@@ -159,3 +160,5 @@ describe("Full SBCS encoding tests", function() {
         })(enc);
 });
 
+
+return module.exports;});

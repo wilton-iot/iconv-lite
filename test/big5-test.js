@@ -1,3 +1,4 @@
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
 var assert  = require('assert'),
     iconv   = require(__dirname + '/../');
 
@@ -54,3 +55,5 @@ describe("Big5 tests", function() {
         assert.strictEqual(iconv.encode("十", "big5").toString('hex'), "a451");
     });
 });
+
+return module.exports;});

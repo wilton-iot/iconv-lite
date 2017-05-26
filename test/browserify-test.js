@@ -1,5 +1,6 @@
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
 var assert = require('assert'),
-    iconv = require('../');
+    iconv = require('iconv-lite/');
 
 try {
     // We manually install browserify and test it because on Node v0.8 it doesn't install cleanly and fails Travis tests.
@@ -61,3 +62,5 @@ describe("Full Browserify tests", function() {
 });
 
 
+
+return module.exports;});

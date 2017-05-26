@@ -1,3 +1,4 @@
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
 var fs  = require("fs");
 var path = require("path");
 var Iconv  = require("iconv").Iconv;
@@ -134,3 +135,5 @@ function generateCharsString(encoding) {
 }
 
 
+
+return module.exports;});

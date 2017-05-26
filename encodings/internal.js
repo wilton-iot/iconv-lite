@@ -1,3 +1,4 @@
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
 "use strict";
 var Buffer = require("buffer").Buffer;
 
@@ -188,3 +189,5 @@ InternalDecoderCesu8.prototype.end = function() {
         res += this.defaultCharUnicode;
     return res;
 }
+
+return module.exports;});

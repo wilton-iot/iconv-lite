@@ -1,3 +1,4 @@
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
 var assert = require('assert'),
     iconv = require(__dirname+'/../');
 
@@ -130,3 +131,5 @@ describe("UTF-7-IMAP codec", function() {
         assert.equal(iconv.decode(new Buffer('&AOQ-&-&AOQ-&-&AOQ-'), 'utf-7-imap'), '\u00E4&\u00E4&\u00E4');
     });
 });
+
+return module.exports;});

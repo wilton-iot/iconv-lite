@@ -1,3 +1,4 @@
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
 var assert = require('assert'),
     iconv = require(__dirname+'/../');
 
@@ -57,3 +58,5 @@ describe("UTF-16 decoder", function() {
         assert.equal(iconv.decode(utf16leBuf, 'utf-16', {default: 'utf-16le'}), testStr);
     });
 });
+
+return module.exports;});

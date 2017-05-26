@@ -1,7 +1,8 @@
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
 
 // This script generates unicode normalization data.
 
-var utils = require("../utils"),
+var utils = require("iconv-lite/utils"),
     errTo = require("errto"),
     async = require("async");
 
@@ -101,7 +102,7 @@ async.parallel({
     //           ' !"#$%&\'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~\x7f';
 
 
-    // var encodings = require("../../encodings/sbcs-data-generated");
+    // var encodings = require("iconv-lite/../encodings/sbcs-data-generated");
     // for (var encName in encodings) {
     //     var enc = encodings[encName];
     //     if (enc.chars) {
@@ -154,3 +155,5 @@ async.parallel({
 }));
 
 
+
+return module.exports;});

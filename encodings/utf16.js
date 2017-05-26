@@ -1,3 +1,4 @@
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
 "use strict";
 var Buffer = require("buffer").Buffer;
 
@@ -175,3 +176,5 @@ function detectEncoding(buf, defaultEncoding) {
 }
 
 
+
+return module.exports;});

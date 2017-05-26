@@ -1,3 +1,4 @@
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
 var assert = require('assert'),
     iconv = require(__dirname+'/../');
 
@@ -21,3 +22,5 @@ describe("CESU-8 codec", function() {
         assert.equal(iconv.decode(new Buffer("eda0bdedb8b1", 'hex'), "cesu8"), "😱");
     });
 });
+
+return module.exports;});

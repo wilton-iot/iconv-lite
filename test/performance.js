@@ -1,9 +1,10 @@
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
 
 if (module.parent) // Skip this file from testing.
     return;
 
 var iconv = require('iconv');
-var iconv_lite = require("../");
+var iconv_lite = require("iconv-lite/");
 
 var encoding = process.argv[2] || "windows-1251";
 var convertTimes = 10000;
@@ -68,3 +69,5 @@ var mbs = convertTimes*buf.length/duration/1024;
 
 console.log("iconv-lite: "+duration+"ms, "+mbs.toFixed(2)+" Mb/s.");
 
+
+return module.exports;});
