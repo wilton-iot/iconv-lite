@@ -10,7 +10,7 @@ var testStringHex = "48656c6c6f31323321";
 describe("Generic UTF8-UCS2 tests", function() {
     
     it("Return values are of correct types", function() {
-//        assert.ok(iconv.encode(testString, "utf8") instanceof Buffer);
+        assert.ok(iconv.encode(testString, "utf8") instanceof Buffer);
         
         var s = iconv.decode(new Buffer(testString), "utf8");
         assert.strictEqual(Object.prototype.toString.call(s), "[object String]");
@@ -25,12 +25,12 @@ describe("Generic UTF8-UCS2 tests", function() {
 
     it("Base64 correctly encoded/decoded", function() {    
         assert.strictEqual(iconv.encode(testStringBase64, "base64").toString("binary"), testString);
-        assert.strictEqual(iconv.decode(new Buffer(testString, "binary"), "base64"), testString);
+        assert.strictEqual(iconv.decode(new Buffer(testString, "binary"), "base64"), testStringBase64);
     });
 
     it("Hex correctly encoded/decoded", function() {    
         assert.strictEqual(iconv.encode(testStringHex, "hex").toString("binary"), testString);
-        assert.strictEqual(iconv.decode(new Buffer(testString, "binary"), "hex"), testString);
+        assert.strictEqual(iconv.decode(new Buffer(testString, "binary"), "hex"), testStringHex);
     });
     
     it("Latin1 correctly encoded/decoded", function() {    
@@ -40,7 +40,7 @@ describe("Generic UTF8-UCS2 tests", function() {
     
     it("Convert to string, not buffer (utf8 used)", function() {
         var res = iconv.encode(new Buffer(testStringLatin1, "utf8"), "utf8");
-//        assert.ok(res instanceof Buffer);
+        assert.ok(res instanceof Buffer);
         assert.strictEqual(res.toString("utf8"), testStringLatin1);
     });
     
