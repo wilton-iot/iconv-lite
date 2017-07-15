@@ -50,5 +50,11 @@
         "istanbul": "*",
         "semver": "*",
         "iconv": "*"
-    }
+    },
+  "wilton": {
+    "excludes": [
+      "generation",
+      "test"
+    ]
+  }
 }
