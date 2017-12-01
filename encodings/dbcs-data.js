@@ -1,4 +1,4 @@
-define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
 "use strict";
 
 // Description of supported double byte encodings and aliases.
@@ -163,6 +163,7 @@ module.exports = {
         table: function() { return require('iconv-lite/encodings/tables/cp950.js') },
     },
 
+/* // breaks nashorn parser
     // Big5 has many variations and is an extension of cp950. We use Encoding Standard's as a consensus.
     'big5': 'big5hkscs',
     'big5hkscs': {
@@ -174,6 +175,7 @@ module.exports = {
     'cnbig5': 'big5hkscs',
     'csbig5': 'big5hkscs',
     'xxbig5': 'big5hkscs',
+*/
 };
 
-return module.exports;});
+require = requireOrig;});

@@ -1,4 +1,4 @@
-define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
 "use strict";
 var Buffer = require("buffer").Buffer;
 
@@ -190,4 +190,4 @@ InternalDecoderCesu8.prototype.end = function() {
     return res;
 }
 
-return module.exports;});
+require = requireOrig;});

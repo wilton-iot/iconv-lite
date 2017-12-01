@@ -1,4 +1,4 @@
-define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
 "use strict";
 
 // Update this array if you add/rename/remove files in this directory.
@@ -22,4 +22,4 @@ for (var i = 0; i < modules.length; i++) {
             exports[enc] = mod[enc];
 }
 
-return module.exports;});
+require = requireOrig;});

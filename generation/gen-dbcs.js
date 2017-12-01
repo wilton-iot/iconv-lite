@@ -1,4 +1,4 @@
-define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
 var utils = require("iconv-lite/utils"), 
     errTo = require("errto"),
     async = require("async");
@@ -156,4 +156,4 @@ async.parallel({
 
 
 
-return module.exports;});
+require = requireOrig;});

@@ -1,6 +1,6 @@
-define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
 var assert = require('assert'),
-    iconv = require('iconv-lite/');
+    iconv = require('iconv-lite');
 
 try {
     // We manually install browserify and test it because on Node v0.8 it doesn't install cleanly and fails Travis tests.
@@ -63,4 +63,4 @@ describe("Full Browserify tests", function() {
 
 
 
-return module.exports;});
+require = requireOrig;});

@@ -1,9 +1,9 @@
-define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
 var test = require("tape-compat");
 var describe = test;
 var it = test.it;
 var assert = require('assert'),
-    iconv = require('iconv-lite/');
+    iconv = require('iconv-lite');
 
 var testString = "Hello123!";
 var testStringLatin1 = "Hello123!£Å÷×çþÿ¿®";
@@ -84,4 +84,4 @@ describe("Generic UTF8-UCS2 tests", function() {
     });
 });
 
-return module.exports;});
+require = requireOrig;});
