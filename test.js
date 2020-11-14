@@ -21,4 +21,9 @@ define([
 
     print("test: iconv-lite");
 
+
+    buf = new Buffer(str, 'win1251');
+    buf.write(str, 'gbk');
+    str = buf.toString('latin1');
+
 });
